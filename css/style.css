@@ -1,0 +1,146 @@
+:root{
+    --color-light-mode: #E6E6FA ;
+
+
+    --font-color: #9e9eb3 ;
+    --icon-color:#150525 ;
+    --really-dark-color: #312d37;
+    --black-color:#000000 ;
+
+    --color-purple: #DDA0DD;
+    --dark-purple: #731e70;
+    --really-dark-purple: #5500a5;
+
+    --color-gradient: linear-gradient(90deg, var(--color-purple), var(--dark-purple), var(--really-dark-purple)) ;
+}
+
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container{
+    height: 100vh ;
+    width: 100%;
+    background: var(--color-gradient) ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#login_form{
+    background-color: var(--color-light-mode);
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    border-radius: 8px;
+    gap: 30px;
+    box-shadow: 5px 5px 8px rgba(0,0,0,0.336);
+    height: fit-content;
+}
+
+#login_header{
+    display: flex;
+    align-items:center ;
+    justify-content: space-between;
+}
+
+#login_header h1{
+    font-size: 40px;
+}
+
+#mode_icon{
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#social_media{
+    display: flex;
+    justify-content: space-around;
+}
+
+#social_media img{
+    width: 35px;
+}
+
+#social_media img:hover{
+    transform: scale(1.2);
+}
+
+#inputs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.input_box label{
+    font-size: 14px;
+    color: var(--font-color);
+}
+
+.input_field{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 3px;
+    cursor: text;
+    border-bottom: 1px solid var(--dark-purple);
+}
+
+.input_field i{
+    font-size: 18px;
+    color: var(--icon-color) ;
+}
+
+.input_field input{
+    border: none;
+    background-color: transparent;
+    width: 260px;
+    font-size: 18px;
+    padding: 0 5px;
+}
+
+.input_field input:focus{
+    outline: none;
+}
+
+#forgot_password a{
+    text-decoration: none;
+    font-size: 14px;
+    color: var(--really-dark-color);
+}
+
+#forgot_password a:hover{
+    color: var(--dark-purple);
+}
+
+#login_button{
+    width: 100%;
+    border: none;
+    background: var(--color-gradient) ;
+    color: var(--color-light-mode) ;
+    padding: 7px;
+    font-size: 18px;
+    border-radius: 3px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#login_button:hover{
+    transform: scale(1.05);
+}
+
+
+
+.dark#login_form{
+    color: var(--color-light-mode);
+    background-color: var(--really-dark-color);
+}
+
+.dark#login_form .input_field input, .dark#login_form .input_field i{
+    color: var(--color-light-mode);
+}
